@@ -3,50 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link
-      rel="preload"
-      href="./dashboard/css/theme.min.css"
-      data-hs-appearance="default"
-      as="style"
-    />
     <link rel="stylesheet" href="./dashboard/vendor/bootstrap-icons/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spider</title>
-    <!-- Init theme -->
-    <style data-hs-appearance-onload-styles>
-      * {
-        transition: unset !important;
-      }
-
-      body {
-        opacity: 0;
-      }
-    </style>
-
-    <script src="./dashboard/js/init.theme.js"></script>
-
-    <!-- Apparence -->
-    <script src="./dashboard/js/hs.theme-appearance.js"></script>
-
-    <!-- Custom css -->
-    <link rel="stylesheet" href="./dashboard/css/utilities.min.css" />
-    <link rel="stylesheet" href="./dashboard/css/style.css" />
   </head>
   <body class="has-navbar-vertical-aside navbar-vertical-aside-show-xl">
     <div id="root"></div>
     <script type="module" src="/src/apps/main.tsx"></script>
-    <!-- JS Global Compulsory  -->
-    <script src="./dashboard/vendor/jquery/dist/jquery.min.js"></script>
-    <script src="./dashboard/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
-    <script src="./dashboard/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JS Implementing Plugins -->
-    <script src="./dashboard/vendor/hs-navbar-vertical-aside/dist/hs-navbar-vertical-aside.min.js"></script>
-    <script src="./dashboard/vendor/hs-add-field/dist/hs-add-field.js"></script>
-
-    <!-- JS Front -->
-    <script src="./dashboard/js/theme.min.js"></script>
-    <script src="./dashboard/js/init.js"></script>
-    <script src="./dashboard/js/style-switcher.js"></script>
   </body>
 </html>
