@@ -4,15 +4,70 @@
 
 @layer components {
     .btn-primary {
-       @apply  bg-red-600 hover:bg-red-700 focus:ring-red-500  focus:outline-none focus:ring-2  focus:ring-opacity-75 text-white font-semibold
+        @apply bg-red-600 hover:bg-red-700 focus:ring-red-500  focus:outline-none focus:ring-2  focus:ring-opacity-75 text-white font-semibold;
     }
-    .input-auth, .input-primary {
-        @apply w-full px-3 py-2 border bg-gray-300 border-gray-300 rounded-md focus:outline-none focus:border-blue-500
+    .input-auth,
+    .input-primary {
+        @apply w-full px-3 py-2 border bg-gray-300 border-gray-300 rounded-md focus:outline-none focus:border-blue-500;
     }
-}
-
-
-.p-header {
-    padding: 8px 32px 8px 0 !important;
-    border: none;
+    .nav-button-red {
+        @apply rounded-full text-white w-[35px] h-[35px] flex items-center justify-center bg-spider-red hover:bg-spider-red-darker flex-shrink-0;
+    }
+    .nav-menu-item {
+        @apply min-h-[36px] flex justify-between items-center rounded-r-full pr-3 cursor-pointer relative overflow-hidden transition-colors;
+        &.active {
+            @apply bg-spider-red text-white;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            @apply bg-spider-red transition-all duration-500;
+        }
+        &:hover,
+        &.active {
+            @apply hover:text-white hover:bg-gray-100;
+            &::after {
+                @apply w-full;
+            }
+        }
+    }
+    .collapsed-sidebar {
+        .menu {
+            .dropdown {
+                position: relative;
+                margin-bottom: 15px;
+                .left {
+                    width: 100%;
+                    span.icon {
+                        font-size: 25px;
+                        padding-left: 10px;
+                    }
+                    span.text {
+                        opacity: 0;
+                    }
+                }
+                .caret {
+                    display: none;
+                }
+                &>ul{
+                    max-height: initial;
+                    position: absolute;
+                    right: -240px;
+                    top: 0;
+                    width: 240px;
+                    display: none;
+                    @apply bg-white shadow-2xl pr-3 pt-3 pb-3 rounded-md;
+                }
+                &:hover>ul{
+                    display: block;
+                }
+            }
+        }
+    }
 }
