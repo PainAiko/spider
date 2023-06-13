@@ -4,7 +4,7 @@ import NotificationItem from "./NotificationItem";
 
 export default function NotificationPopover() {
     return (
-        <div className="bg-white shadow-2xl rounded-lg mt-16 w-[400px] h-[455px] right-0 border flex-row items-stretch">
+        <div className="bg-white shadow-2xl rounded-lg mt-16 w-[400px] h-[455px] right-0 border flex-row items-stretch z-50 ">
             <div className="header flex items-center px-5 h-[48px] border-b"><strong>Notifications</strong></div>
             <div className="h-[347px] overflow-y-auto">
                 <NotificationItem/>
